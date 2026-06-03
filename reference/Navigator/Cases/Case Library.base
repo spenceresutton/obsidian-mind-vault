@@ -1,0 +1,66 @@
+filters:
+  and:
+    - file.hasTag("sanity-test")
+    - file.hasTag("case")
+properties:
+  case_number:
+    displayName: "Case #"
+  disease_state:
+    displayName: Disease State
+  difficulty:
+    displayName: Difficulty
+  challenge_types:
+    displayName: Challenge Types
+  author:
+    displayName: Author
+  status:
+    displayName: Status
+  date:
+    displayName: Date
+views:
+  - type: table
+    name: All Cases
+    groupBy:
+      property: disease_state
+      direction: ASC
+    order:
+      - case_number
+      - disease_state
+      - difficulty
+      - challenge_types
+      - author
+      - status
+      - date
+  - type: table
+    name: UTI
+    filters:
+      and:
+        - disease_state == "UTI"
+    order:
+      - case_number
+      - difficulty
+      - challenge_types
+      - author
+      - status
+  - type: table
+    name: CAP
+    filters:
+      and:
+        - disease_state == "CAP"
+    order:
+      - case_number
+      - difficulty
+      - challenge_types
+      - author
+      - status
+  - type: table
+    name: Pending Review
+    filters:
+      and:
+        - status == "pending"
+    order:
+      - case_number
+      - disease_state
+      - difficulty
+      - challenge_types
+      - date

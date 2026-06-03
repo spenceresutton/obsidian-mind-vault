@@ -55,6 +55,16 @@ Custom slash commands, subagents, and reusable workflows. Defined in `.claude/co
 | `/om-vault-upgrade` | Import content from an existing vault — detects version, classifies notes, transforms frontmatter, rebuilds indexes |
 | `/om-project-archive` | Move completed project from `work/active/` to `work/archive/YYYY/`, update all indexes |
 
+### Navigator Case Management
+
+| Command | Purpose |
+|---------|---------|
+| `/om-case-ingest` | Pull all cases from the St. Joseph Sanity Test Google Doc and import to `reference/Navigator/Cases/approved/` |
+| `/om-case-analyze` | Analyze all approved cases to build or update [[brain/Case Style Guide]] — challenge taxonomy, anti-patterns, voice |
+| `/om-case-generate` | Generate a new case with style calibration from approved cases and available guidelines; saves to `pending/` |
+| `/om-case-review` | Review pending cases one at a time — approve, revise, or reject; mirrors LinkedIn post approval workflow |
+| `/om-case-export` | Export approved cases formatted for the Google Doc — markdown block, new Doc, or append to existing |
+
 ## Usage Notes
 
 **Daily:**
@@ -139,3 +149,79 @@ SessionStart hook runs `qmd --index <name> update` automatically, reading the in
 2. **`/om-peer-scan`** (if needed) — understand what teammates have already built
 3. Create work note from gathered context
 4. **`/om-vault-audit`** — ensure everything links properly
+
+---
+
+## obsidian-second-brain Global Commands
+
+Installed at `~/.claude/skills/obsidian-second-brain/`. Commands copied to `~/.claude/commands/`. These are available in any Claude session, not just obsidian-mind.
+
+### Research Toolkit
+
+| Command | Purpose |
+|---------|---------|
+| `/x-read` | Read and save content from X/Twitter |
+| `/x-pulse` | Scan X for trends on a topic |
+| `/research` | AI-powered research via Perplexity — findings save to vault |
+| `/research-deep` | Deep research with multiple sources |
+| `/notebooklm` | NotebookLM integration for synthesis |
+| `/youtube` | Extract and save YouTube content |
+
+### Vault Operations
+
+| Command | Purpose |
+|---------|---------|
+| `/obsidian-save` | Save conversation content to vault |
+| `/obsidian-capture` | Quick capture to inbox |
+| `/obsidian-task` | Create or update a task |
+| `/obsidian-find` | Search vault for a topic |
+| `/obsidian-connect` | Find and create missing links |
+| `/obsidian-health` | Quick vault health check |
+| `/obsidian-log` | Append to vault log |
+| `/obsidian-reconcile` | Reconcile duplicate or conflicting notes |
+
+### Learning & Development
+
+| Command | Purpose |
+|---------|---------|
+| `/obsidian-learn` | Save a learning to the vault |
+| `/obsidian-daily` | Daily note operations |
+| `/obsidian-recap` | Recap recent vault activity |
+| `/obsidian-emerge` | Surface emerging patterns |
+| `/obsidian-challenge` | Track a challenge or obstacle |
+| `/obsidian-graduate` | Promote a learning to a permanent note |
+
+### People & World
+
+| Command | Purpose |
+|---------|---------|
+| `/obsidian-person` | Create or update a person note |
+| `/obsidian-world` | Capture external world events |
+
+### Projects & Decisions
+
+| Command | Purpose |
+|---------|---------|
+| `/obsidian-project` | Create or update a project note |
+| `/obsidian-adr` | Record an architectural decision |
+| `/obsidian-decide` | Capture a decision with context |
+| `/obsidian-board` | Update a kanban board |
+| `/obsidian-ingest` | Ingest a document into the vault |
+| `/obsidian-synthesize` | Synthesize multiple sources into one note |
+| `/obsidian-visualize` | Create a visual representation |
+| `/obsidian-export` | Export vault content |
+| `/obsidian-init` | Initialize vault structure |
+
+---
+
+## Automated Agents
+
+Autonomous agents that run outside interactive sessions.
+
+| Agent | Schedule | What it does | Log |
+|-------|----------|-------------|-----|
+| Nightly consolidation | 10pm daily | Propagates PostCompact summaries, updates active work notes, checks orphans | `/tmp/obsidian-claude-nightly.log` |
+| Weekly review | 6pm Friday | Cross-session patterns, North Star alignment, uncaptured wins | `/tmp/obsidian-claude-weekly.log` |
+| Vault health | 9pm Sunday | Structural audit — broken links, stale notes, frontmatter gaps | `/tmp/obsidian-claude-health.log` |
+| PostCompact hook | On context compaction | Silently propagates session summary to vault | Runs via `obsidian-bg-agent.sh` |
+| Morning briefing | Remote agent | Granola + Gmail + Slack DMs/mentions → Jira sync → Slack summary with vault-pending items | `trig_01HWnacKCbmmY3oDitKZhUCP` |

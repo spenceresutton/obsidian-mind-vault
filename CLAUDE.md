@@ -354,3 +354,4 @@ Five lifecycle hooks in `.claude/settings.json`:
 - Always check for and suggest connections between notes.
 - Every note must have a `description` field (~150 chars). Claude fills this automatically.
 - **Zero data loss**: when reorganizing, always use `git mv`. Never delete without explicit user confirmation.
+- **Model recommendations**: At the start of any substantial session, assess the planned work and proactively recommend a model if Sonnet is not the best fit. Opus 4.8 for clinical case generation/review, complex multi-step reasoning, or first-pass accuracy work. Sonnet for general vault operations, search, indexing, and writing tasks.
