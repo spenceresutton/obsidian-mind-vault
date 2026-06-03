@@ -3,7 +3,7 @@ date: 2026-06-01
 description: "SSTI case — rapidly spreading nonpurulent cellulitis progressing to septic shock requiring vasopressor support; ICU admission with broad empiric coverage required"
 disease_state: "SSTI"
 difficulty: hard
-author: Claude
+author: Spencer
 status: pending
 case_number: "SSTI-05"
 challenge_types: [severe-SSTI, septic-shock, hemodynamic-instability, ICU-care, empiric-broad-spectrum, extended-infusion]
@@ -17,7 +17,7 @@ source: generated
 # SSTI Case 5: Nonpurulent SSTI with Septic Shock
 
 **Difficulty:** hard
-**Author:** Claude
+**Author:** Spencer
 
 ## Prompt
 

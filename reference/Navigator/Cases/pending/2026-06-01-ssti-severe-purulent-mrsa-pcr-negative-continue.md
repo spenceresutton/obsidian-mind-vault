@@ -3,7 +3,7 @@ date: 2026-06-01
 description: "SSTI case — severe purulent SSTI with systemic signs and negative MRSA nasal PCR; continue empiric vancomycin until wound cultures confirm; PCR de-escalation rule applies to pneumonia, not purulent SSTI"
 disease_state: "SSTI"
 difficulty: hard
-author: Claude
+author: Spencer
 status: pending
 case_number: "SSTI-09"
 challenge_types: [severe-purulent-SSTI, MRSA-PCR-negative, empiric-anti-MRSA-continuation, de-escalation-discipline]
@@ -17,7 +17,7 @@ source: generated
 # SSTI Case 9: Severe Purulent SSTI — MRSA Nasal PCR Negative, Maintain Coverage
 
 **Difficulty:** hard
-**Author:** Claude
+**Author:** Spencer
 
 ## Prompt
 
@@ -92,7 +92,7 @@ MRSA Nasal PCR: Negative
 ## Expected Output
 
 - **Presentation:** Severe purulent SSTI with systemic signs; MRSA nasal PCR negative — continue empiric vancomycin until wound cultures confirm organism; negative nasal PCR does not govern anti-MRSA de-escalation in purulent SSTI
-- **Antibiotic Initiation** *(if applicable):* Continue vancomycin IV (initiated in ED). Source control achieved with I&D. Note eGFR 56 — pharmacist to assess vancomycin dosing (at SJN, CrCl >60 threshold for cefepime dose adjustment does not apply here, but vancomycin requires AUC-based monitoring with this degree of renal function).
+- **Antibiotic Initiation** *(if applicable):* Continue vancomycin IV (initiated in ED). Source control achieved with I&D. Pharmacist to manage AUC-guided vancomycin dosing per renal function (eGFR 56).
 - **Treatment Optimization** *(if applicable):* **Do not discontinue vancomycin based on negative MRSA nasal PCR.** Await wound and blood culture results (48–72h). If cultures confirm MSSA, step down to nafcillin/oxacillin IV or cephalexin/dicloxacillin PO when IV-to-PO criteria are met. If MRSA confirmed, step down to TMP-SMX DS or doxycycline when eligible. This differs from the pneumonia context, where a negative MRSA nasal PCR is sufficient to remove empiric vancomycin.
 
 **INCORRECT:**

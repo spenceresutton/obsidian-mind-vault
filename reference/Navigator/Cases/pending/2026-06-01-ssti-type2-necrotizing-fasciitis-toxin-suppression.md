@@ -3,7 +3,7 @@ date: 2026-06-01
 description: "SSTI case — monomicrobial necrotizing fasciitis (Type 2, Group A Streptococcus); focus on clindamycin duration for toxin suppression — not the full antibiotic course"
 disease_state: "SSTI"
 difficulty: hard
-author: Claude
+author: Spencer
 status: pending
 case_number: "SSTI-11"
 challenge_types: [necrotizing-fasciitis-type2, GAS-monomicrobial, toxin-suppression, surgical-emergency, ICU-care, septic-shock]
@@ -17,7 +17,7 @@ source: generated
 # SSTI Case 11: Necrotizing Fasciitis — Type 2 (GAS, Toxin Suppression Duration)
 
 **Difficulty:** hard
-**Author:** Claude
+**Author:** Spencer
 
 ## Prompt
 

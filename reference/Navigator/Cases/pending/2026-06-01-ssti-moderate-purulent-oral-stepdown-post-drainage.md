@@ -68,6 +68,7 @@ Wound culture — left axillary abscess drainage (collected day of admission): S
 
 | Test | Result | Reference Range |
 |------|--------|----------------|
+| **Electrolytes** | | |
 | Sodium | 137 mEq/L | 136 – 145 mEq/L |
 | Potassium | 3.9 mEq/L | 3.5 – 5.1 mEq/L |
 | Chloride | 100 mEq/L | 98 – 106 mEq/L |
@@ -76,12 +77,14 @@ Wound culture — left axillary abscess drainage (collected day of admission): S
 | Creatinine | 0.7 mg/dL | 0.5 – 1.0 mg/dL |
 | eGFR | > 60 mL/min/1.73m² | > 60 |
 | Glucose | 88 mg/dL | 70 – 100 mg/dL |
+| **Liver function** | | |
 | Total protein | 6.9 g/dL | 6.3 – 8.2 g/dL |
 | Albumin | 3.6 g/dL | 3.5 – 5.0 g/dL |
 | Total bilirubin | 0.4 mg/dL | 0.2 – 1.2 mg/dL |
 | AST | 22 U/L | 10 – 40 U/L |
 | ALT | 16 U/L | 7 – 56 U/L |
 | Alkaline phosphatase | 58 U/L | 44 – 147 U/L |
+| **Minerals** | | |
 | Calcium (total) | 9.0 mg/dL | 8.5 – 10.5 mg/dL |
 
 ### Sepsis Markers

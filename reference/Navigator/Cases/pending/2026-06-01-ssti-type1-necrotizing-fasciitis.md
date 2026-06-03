@@ -3,7 +3,7 @@ date: 2026-06-01
 description: "SSTI case — polymicrobial necrotizing fasciitis (Type 1) in a diabetic patient; CT confirms gas within fascial planes; surgical emergency requiring emergent debridement and broad-spectrum antibiotics with anaerobic coverage"
 disease_state: "SSTI"
 difficulty: hard
-author: Claude
+author: Spencer
 status: pending
 case_number: "SSTI-10"
 challenge_types: [necrotizing-fasciitis-type1, polymicrobial, surgical-emergency, broad-spectrum-coverage, ICU-care, septic-shock, extended-infusion]
@@ -17,7 +17,7 @@ source: generated
 # SSTI Case 10: Necrotizing Fasciitis — Type 1 (Polymicrobial)
 
 **Difficulty:** hard
-**Author:** Claude
+**Author:** Spencer
 
 ## Prompt
 

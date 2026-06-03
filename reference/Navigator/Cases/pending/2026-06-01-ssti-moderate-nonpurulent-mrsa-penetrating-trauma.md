@@ -3,7 +3,7 @@ date: 2026-06-01
 description: "SSTI case — nonpurulent soft tissue infection following penetrating nail injury; penetrating trauma is an MRSA risk factor requiring empiric anti-MRSA coverage"
 disease_state: "SSTI"
 difficulty: medium
-author: Claude
+author: Spencer
 status: pending
 case_number: "SSTI-03"
 challenge_types: [MRSA-risk-penetrating-trauma, nonpurulent-SSTI, empiric-MRSA-coverage]
@@ -17,7 +17,7 @@ source: generated
 # SSTI Case 3: Nonpurulent SSTI Following Penetrating Trauma
 
 **Difficulty:** medium
-**Author:** Claude
+**Author:** Spencer
 
 ## Prompt
 
@@ -96,7 +96,8 @@ On arrival, vitals are: T 38.4°C, HR 98, BP 122/76, RR 16, SpO2 98% on room air
 - **Treatment Optimization** *(if applicable):* If wound cultures confirm MSSA (not MRSA), step down to cefazolin IV or cephalexin PO and discontinue vancomycin. When IV-to-PO criteria are met, complete a total 5–10 day course orally. If pain or erythema persist disproportionate to exam findings, reassess for deep space infection or evolving osteomyelitis and consider MRI foot.
 
 **INCORRECT:**
-- Cefazolin alone — no MRSA coverage; penetrating trauma is an established MRSA risk factor regardless of purulence
+- Cefazolin alone — lacks MRSA coverage; penetrating trauma is an established MRSA risk factor regardless of purulence
+- TMP-SMX or doxycycline — lack sufficient strep coverage. Despite the MRSA risk factor, *Streptococcus* is the leading cause of nonpurulent SSTI and empiric therapy must cover it.
 
 ## Related
 
