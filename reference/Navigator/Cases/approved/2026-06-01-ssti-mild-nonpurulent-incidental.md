@@ -4,7 +4,7 @@ description: "SSTI case — nonpurulent cellulitis discovered incidentally durin
 disease_state: "SSTI"
 difficulty: easy
 author: Spencer
-status: pending
+status: approved
 case_number: "SSTI-01"
 challenge_types: [incidental-finding, severity-classification, oral-therapy, antibiotic-stewardship]
 tags:

@@ -4,7 +4,7 @@ description: "SSTI case — nonpurulent soft tissue infection following penetrat
 disease_state: "SSTI"
 difficulty: medium
 author: Spencer
-status: pending
+status: approved
 case_number: "SSTI-03"
 challenge_types: [MRSA-risk-penetrating-trauma, nonpurulent-SSTI, empiric-MRSA-coverage]
 tags:

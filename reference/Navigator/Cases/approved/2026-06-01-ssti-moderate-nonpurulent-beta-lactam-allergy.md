@@ -4,7 +4,7 @@ description: "SSTI case — moderate nonpurulent cellulitis with documented Type
 disease_state: "SSTI"
 difficulty: medium
 author: Spencer
-status: pending
+status: approved
 case_number: "SSTI-02"
 challenge_types: [beta-lactam-allergy, nonpurulent-SSTI, IV-therapy, oral-step-down]
 tags:

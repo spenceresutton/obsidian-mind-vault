@@ -4,7 +4,7 @@ description: "SSTI case — rapidly spreading nonpurulent cellulitis progressing
 disease_state: "SSTI"
 difficulty: hard
 author: Spencer
-status: pending
+status: approved
 case_number: "SSTI-05"
 challenge_types: [severe-SSTI, septic-shock, hemodynamic-instability, ICU-care, empiric-broad-spectrum, extended-infusion]
 tags:
@@ -23,7 +23,7 @@ source: generated
 
 SS is a 67-year-old male with a past medical history significant for coronary artery disease (s/p PCI 4 years ago), type 2 diabetes mellitus, and hypertension who presents via EMS after his spouse called 911 for acute-onset confusion and inability to bear weight on the right leg. Over the preceding 36 hours, he developed rapidly worsening redness, swelling, and pain in the right lower extremity. He had no systemic symptoms initially, but his spouse reports he became increasingly confused and lethargic over several hours before the call.
 
-On arrival to the ED, vitals are: T 39.3°C, HR 132, BP 78/46, RR 26, SpO2 92% on room air. He is placed on 2L nasal cannula with improvement to 95%. Two large-bore IVs are placed and 2L of normal saline are administered over 45 minutes; MAP reached 58 mmHg but remained below 65 mmHg. An additional liter of crystalloid produced no further hemodynamic improvement. MAP remained below 60 mmHg and norepinephrine was initiated at 0.06 mcg/kg/min, titrated to 0.08 mcg/kg/min. Blood cultures x2 sets are collected and the patient is transferred to the ICU.
+On arrival to the ED, vitals are: T 39.3°C, HR 132, BP 78/46, RR 26, SpO2 92% on room air. He is placed on 2L nasal cannula with improvement to 95%. Aggressive fluid repletion was initiated, but due to inability to maintain MAP above 65, norepinephrine was initiated. Blood cultures x2 sets are collected and the patient is transferred to the ICU.
 
 On ICU arrival, vitals are: T 38.8°C (rectal), HR 116, BP 92/54 (MAP 67 on NE 0.08 mcg/kg/min), RR 22, SpO2 95% on 2L NC.
 
@@ -99,17 +99,18 @@ He takes aspirin, metoprolol succinate, atorvastatin, metformin, and lisinopril.
 
 ## Expected Output
 
-- **Presentation:** Nonpurulent SSTI with septic shock requiring vasopressor support — no crepitus, no gas on imaging, no necrotizing features on exam; broad empiric anti-MRSA plus gram-negative coverage indicated
-- **Antibiotic Initiation** *(if applicable):* Vancomycin IV (AUC-guided dosing; pharmacist to adjust per renal function — SCr 1.8, eGFR 42) + Piperacillin-tazobactam 4.5g IV loading dose over 30 min, then 4.5g IV q8h over 4 hours extended infusion per SJN sepsis/ICU protocol. Do not delay antibiotics for CT or surgical consultation.
-- **Treatment Optimization** *(if applicable):* If necrotizing fasciitis cannot be excluded on clinical grounds despite negative plain film, obtain CT right lower extremity and surgical consultation. If cultures return with a targetable organism, narrow spectrum accordingly. Continue IV antibiotics until clinically stable for ≥48h off vasopressors, then reassess IV-to-PO eligibility. Total course typically 10–14 days for severe cellulitis.
-
-**INCORRECT:**
-- Cefazolin or ceftriaxone alone — no MRSA coverage; inadequate for septic shock from SSTI
-- Standard pip/tazo 30-minute infusion — SJN protocol requires extended infusion (4h) as default; sepsis/ICU indication escalates to 4.5g q8h, not 3.375g
-- Delaying antibiotics for CT or surgical consultation — septic shock requires immediate empiric antibiotics regardless of imaging plan
+- **Presentation:** Nonpurulent SSTI with septic shock requiring vasopressor support
+- **Antibiotic Initiation** *(if applicable):* Vancomycin IV + Piperacillin-tazobactam 4.5g IV loading dose over 30 min, then 4.5g IV q8h over 4 hours extended infusion + Clindamycin 900 mg IV q8h. Do not delay antibiotics for CT or surgical consultation.
+- **Treatment Optimization** *(if applicable):*
+    - If necrotizing fasciitis cannot be excluded on clinical grounds despite negative plain film, obtain CT right lower extremity and surgical consultation.
+    - If cultures return with a targetable organism, narrow the spectrum accordingly.
+    - Discontinue clindamycin if necrotizing fasciitis is excluded, or infection is not confirmed to be *Streptococcus pyogenes* or *Clostridium* spp.
+    - Treatment should continue for at least 5 days and through clinical improvement. Reasonable to extend course to 10–14 days if slow improvement.
+    - If necrotizing fasciitis is identified, 2–4 weeks of therapy may be warranted.
 
 ## Related
 
 - [[brain/Case Style Guide]]
 - [[reference/Navigator/Cases/guidelines/README]]
+- [[reference/Navigator/Cases/guidelines/local/SJN-SSTI-Guidelines]]
 - [[reference/Navigator/Cases/guidelines/local/SJN-Extended-Infusion-Policy]]

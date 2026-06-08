@@ -4,7 +4,7 @@ description: "SSTI case — polymicrobial necrotizing fasciitis (Type 1) in a di
 disease_state: "SSTI"
 difficulty: hard
 author: Spencer
-status: pending
+status: approved
 case_number: "SSTI-10"
 challenge_types: [necrotizing-fasciitis-type1, polymicrobial, surgical-emergency, broad-spectrum-coverage, ICU-care, septic-shock, extended-infusion]
 tags:
@@ -21,9 +21,9 @@ source: generated
 
 ## Prompt
 
-SS is a 61-year-old male with a past medical history significant for type 2 diabetes mellitus (poorly controlled, HbA1c 11.2% three months ago), obesity, and hypertension who presents via EMS with a 24-hour history of severe, rapidly worsening right lower extremity pain and redness. His spouse reports that the pain was far out of proportion to the visible findings early in the course. Over several hours, redness spread dramatically from the calf toward the thigh and he became acutely confused, at which point she called 911.
+SS is a 61-year-old male with a past medical history significant for type 2 diabetes mellitus (poorly controlled, HbA1c 11.2% three months ago), obesity, chronic venous stasis, recurrent foot ulcers, and hypertension who presents via EMS with a 24-hour history of severe, rapidly worsening right lower extremity pain and redness. His spouse reports that the patient had noticed increased erythema around his ulcers ~48 hours ago. They had plans to follow-up with the podiatrist in the next week. Over several hours, redness spread dramatically from the calf toward the thigh and he became acutely confused, at which point she called 911.
 
-On arrival to the ED, vitals are: T 39.8°C, HR 144, BP 84/48, RR 28, SpO2 90% on room air. He is placed on 4L NC with improvement to 93%. Two large-bore IVs are placed and 2L of normal saline are administered over 30 minutes with minimal hemodynamic response. MAP remained below 65 mmHg and norepinephrine was initiated at 0.1 mcg/kg/min. Blood cultures x2 sets are collected. An emergent CT of the right lower extremity is obtained during resuscitation. The patient is transferred to the ICU.
+On arrival to the ED, vitals are: T 39.8°C, HR 144, BP 84/48, RR 28, SpO2 90% on room air. He is placed on 4L NC with improvement to 93%. Two large-bore IVs are placed and 2L of normal saline are administered over 30 minutes with minimal hemodynamic response. MAP remained below 65 mmHg and norepinephrine was initiated. Blood cultures x2 sets are collected. An emergent CT of the right lower extremity is obtained during resuscitation. The patient is transferred to the ICU.
 
 On ICU arrival, vitals are: T 39.2°C (rectal), HR 138, BP 86/50 (MAP 62 on NE 0.1 mcg/kg/min), RR 26, SpO2 94% on 4L NC.
 
@@ -106,17 +106,22 @@ Wound/tissue cultures: Collected intraoperatively at time of initial exploration
 
 ## Expected Output
 
-- **Presentation:** Necrotizing fasciitis, Type 1 (polymicrobial) — gas within fascial planes on CT, crepitus on exam, septic shock; surgical emergency
-- **Antibiotic Initiation** *(if applicable):* Vancomycin IV (AUC-guided dosing; pharmacist to adjust — Cr 2.4, eGFR 28) + Piperacillin-tazobactam 4.5g IV loading dose over 30 min, then 4.5g IV q8h over 4 hours extended infusion (SJN sepsis/ICU protocol) + Clindamycin 900 mg IV q8h (anaerobic coverage and toxin suppression). **Surgical consult recommended — emergent operative debridement is the primary treatment; antibiotics are adjunctive.**
-- **Treatment Optimization** *(if applicable):* Continue broad-spectrum antibiotics until tissue cultures finalize; narrow based on confirmed organisms. Clindamycin continues through the surgical debridement phase — reassess at 48–72h after the final debridement once wounds are clean and patient is clinically improving. Repeat debridements are expected; total antibiotic duration typically 7–14 days from last debridement.
-
-**INCORRECT:**
-- Standard pip/tazo 30-minute infusion at 3.375g — SJN sepsis/ICU protocol requires extended infusion (4h) at the escalated 4.5g q8h dose
-- Omitting clindamycin — polymicrobial NF involves anaerobes and toxin-producing organisms; clindamycin provides both anaerobic coverage and ribosomal inhibition to suppress toxin production
-- Delaying antibiotics or debridement for further workup — CT confirms gas in fascial planes; operative exploration must not be delayed
+- **Presentation:** Necrotizing fasciitis, Type 1 (polymicrobial)
+- **Antibiotic Initiation** *(if applicable):* Vancomycin IV + Piperacillin-tazobactam 4.5g IV loading dose over 30 min, then 4.5g IV q8h over 4 hours extended infusion + Clindamycin 900 mg IV q8h (toxin suppression).
+    - Surgical consult recommended — emergent operative debridement is the primary treatment; antibiotics are adjunctive.
+    - ID consult recommended
+    - The benefits of clindamycin are best described for treatment of *Streptococcus pyogenes*, which is not a common cause of Type 1 necrotizing fasciitis. In patients with high CDI risk, withholding antitoxin therapy in polymicrobial necrotizing fasciitis is reasonable.
+- **Treatment Optimization** *(if applicable):*
+    - Continue broad-spectrum antibiotics until tissue cultures finalize; narrow based on confirmed organisms.
+    - Clindamycin should be discontinued if *Streptococcus pyogenes* or *Clostridium* spp. are not identified on culture.
+    - If *Streptococcus pyogenes* or *Clostridium* spp. are identified on culture, clindamycin should be continued for 3–5 days and through surgical debridement.
+    - De-escalate coverage to target known organisms when cultures finalize.
+    - Treatment duration is 2–4 weeks.
+    - In patients without osteomyelitis and with extensive debridement (source control), consider discontinuing therapy 5 days after source control is achieved, assuming the patient is afebrile, hemodynamically stable, and without leukocytosis.
 
 ## Related
 
 - [[brain/Case Style Guide]]
 - [[reference/Navigator/Cases/guidelines/README]]
+- [[reference/Navigator/Cases/guidelines/local/SJN-SSTI-Guidelines]]
 - [[reference/Navigator/Cases/guidelines/local/SJN-Extended-Infusion-Policy]]

@@ -4,7 +4,7 @@ description: "SSTI case — purulent abscess s/p I&D with negative MRSA nasal an
 disease_state: "SSTI"
 difficulty: medium
 author: Spencer
-status: pending
+status: approved
 case_number: "SSTI-08"
 challenge_types: [purulent-SSTI, MRSA-PCR-negative, MRSA-risk-stratification, culture-directed-stepdown]
 tags:
@@ -51,7 +51,7 @@ MRSA Inguinal PCR: Negative
 
 ## Expected Output
 
-- **Presentation:** Purulent SSTI s/p I&D; MRSA nasal PCR negative
+- **Presentation:** Purulent SSTI s/p I&D with MRSA nasal and inguinal (-)
 - **Antibiotic Initiation** *(if applicable):* Consider cephalexin 500 mg q6h given primary treatment is I&D for purulent SSTI and overall low risk of MRSA. Patient should receive return precautions if any fever or worsening infection. Doxycycline 100 mg BID or TMP-SMX DS 1 tablet BID reasonable.
 - **Treatment Optimization** *(if applicable):* Adjust to culture-directed therapy when wound culture finalizes. If MSSA confirmed, step down to cephalexin or dicloxacillin. If MRSA confirmed, continue TMP-SMX or doxycycline.
 

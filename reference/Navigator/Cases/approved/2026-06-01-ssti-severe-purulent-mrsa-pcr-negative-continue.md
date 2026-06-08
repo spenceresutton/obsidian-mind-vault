@@ -4,7 +4,7 @@ description: "SSTI case — severe purulent SSTI with systemic signs and negativ
 disease_state: "SSTI"
 difficulty: hard
 author: Spencer
-status: pending
+status: approved
 case_number: "SSTI-09"
 challenge_types: [severe-purulent-SSTI, MRSA-PCR-negative, empiric-anti-MRSA-continuation, de-escalation-discipline]
 tags:
@@ -91,15 +91,16 @@ MRSA Nasal PCR: Negative
 
 ## Expected Output
 
-- **Presentation:** Severe purulent SSTI with systemic signs; MRSA nasal PCR negative — continue empiric vancomycin until wound cultures confirm organism; negative nasal PCR does not govern anti-MRSA de-escalation in purulent SSTI
-- **Antibiotic Initiation** *(if applicable):* Continue vancomycin IV (initiated in ED). Source control achieved with I&D. Pharmacist to manage AUC-guided vancomycin dosing per renal function (eGFR 56).
-- **Treatment Optimization** *(if applicable):* **Do not discontinue vancomycin based on negative MRSA nasal PCR.** Await wound and blood culture results (48–72h). If cultures confirm MSSA, step down to nafcillin/oxacillin IV or cephalexin/dicloxacillin PO when IV-to-PO criteria are met. If MRSA confirmed, step down to TMP-SMX DS or doxycycline when eligible. This differs from the pneumonia context, where a negative MRSA nasal PCR is sufficient to remove empiric vancomycin.
-
-**INCORRECT:**
-- Discontinuing vancomycin based on negative MRSA nasal PCR — the nasal PCR de-escalation rule applies to HAP/VAP; it is not validated for purulent SSTI and MRSA is the most common cause of severe community-acquired abscesses regardless of nasal colonization
-- Narrowing to cefazolin or cephalexin empirically — MRSA cannot be excluded without culture data; de-escalation requires organism confirmation, not PCR guidance
+- **Presentation:** Severe purulent SSTI with systemic signs s/p source control; MRSA nasal PCR negative
+- **Antibiotic Initiation** *(if applicable):* Continue vancomycin IV
+- **Treatment Optimization** *(if applicable):*
+    - Do not discontinue vancomycin based on negative MRSA nasal PCR. Await wound and blood culture results (48–72h). SJN supports PCR-guided de-escalation only in stable patients responding to therapy; this patient is acutely ill with cultures still pending, so de-escalation is premature.
+    - If cultures confirm MSSA, step down to nafcillin/oxacillin IV or cephalexin/dicloxacillin PO when IV-to-PO criteria are met. If MRSA confirmed, step down to TMP-SMX DS or doxycycline when eligible. This differs from the pneumonia context, where a negative MRSA nasal PCR is sufficient to remove empiric vancomycin.
+    - Patient's acute illness makes risk outweigh benefit for empiric de-escalation.
+    - MRSA PCR and cultures increase sensitivity for SSTI when multiple concordant results are represented.
 
 ## Related
 
 - [[brain/Case Style Guide]]
 - [[reference/Navigator/Cases/guidelines/README]]
+- [[reference/Navigator/Cases/guidelines/local/SJN-SSTI-Guidelines]]

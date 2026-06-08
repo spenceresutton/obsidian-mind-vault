@@ -4,7 +4,7 @@ description: "SSTI case — small uncomplicated abscess s/p I&D in a healthy pat
 disease_state: "SSTI"
 difficulty: medium
 author: Spencer
-status: pending
+status: approved
 case_number: "SSTI-07"
 challenge_types: [purulent-SSTI, source-control, antibiotic-withholding, antibiotic-stewardship]
 tags:

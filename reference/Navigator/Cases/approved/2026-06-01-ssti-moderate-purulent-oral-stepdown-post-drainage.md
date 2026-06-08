@@ -4,7 +4,7 @@ description: "SSTI case — purulent SSTI (axillary abscess) s/p I&D on admissio
 disease_state: "SSTI"
 difficulty: medium
 author: Spencer
-status: pending
+status: approved
 case_number: "SSTI-06"
 challenge_types: [purulent-SSTI, source-control, oral-step-down, MRSA-oral-agent-selection, IV-to-PO]
 tags:
@@ -97,7 +97,7 @@ Wound culture — left axillary abscess drainage (collected day of admission): S
 
 ## Expected Output
 
-- **Presentation:** Purulent SSTI (abscess) s/p I&D, clinically improving, MRSA confirmed on culture — IV-to-PO step-down eligible
+- **Presentation:** Purulent SSTI (abscess) s/p I&D, clinically improving, MRSA confirmed on culture
 - **Antibiotic Initiation** *(if applicable):* N/A
 - **Treatment Optimization** *(if applicable):* Patient is clinically stable and meets IV-to-PO conversion criteria. Step down to TMP-SMX DS 1 tablet BID or doxycycline 100 mg PO BID x5 days. **Do not use clindamycin** — D-zone test is indeterminate, indicating inducible MLSB resistance; clindamycin failure risk is unacceptable when susceptible alternatives are available; unnecessary CDI risk. **Do not continue vancomycin IV** — patient fully meets IV-to-PO conversion criteria; continued IV therapy is not justified.
 

@@ -4,7 +4,7 @@ description: "SSTI case — monomicrobial necrotizing fasciitis (Type 2, Group A
 disease_state: "SSTI"
 difficulty: hard
 author: Spencer
-status: pending
+status: approved
 case_number: "SSTI-11"
 challenge_types: [necrotizing-fasciitis-type2, GAS-monomicrobial, toxin-suppression, surgical-emergency, ICU-care, septic-shock]
 tags:
@@ -21,13 +21,13 @@ source: generated
 
 ## Prompt
 
-SS is a 34-year-old female with no significant past medical history who is brought to the emergency department by her husband after he found her in bed, confused and barely responsive. She had been in her usual state of health until approximately 72 hours ago when she sustained a minor laceration to the left thigh after falling on gravel during a trail run. She cleaned the wound at home and applied a bandage. Over the following 2 days she reported worsening pain in the thigh — her husband noted she described the pain as "way worse than it should be." Yesterday she developed fevers and chills. This morning she could not be roused from bed.
+SS is a 34-year-old female with no significant past medical history who is brought to the emergency department by her husband after he found her in bed, confused and barely responsive. She had been in her usual state of health until approximately 72 hours ago when she sustained a minor laceration to the left thigh after falling on gravel during a trail run. She cleaned the wound at home and applied a bandage. Over the following 2 days she reported worsening pain in the thigh. Yesterday she developed fevers and chills. This morning she could not be roused from bed.
 
-On arrival to the ED, vitals are: T 39.9°C, HR 148, BP 80/44, RR 30, SpO2 87% on room air. She is placed on 6L NC with improvement to 92%. Two large-bore IVs are placed and 3L of normal saline are administered; MAP remained below 65 mmHg and norepinephrine was initiated at 0.12 mcg/kg/min. Blood cultures x2 sets are collected. An emergent CT of the left lower extremity is obtained. She is transferred to the ICU.
+On arrival to the ED, vitals are: T 39.9°C, HR 148, BP 80/44, RR 30, SpO2 87% on room air. She is placed on 6L NC with improvement to 92%. Fluid resuscitation failed to maintain blood pressure so patient was initiated on vasopressors. Blood cultures x2 sets are collected. An emergent CT of the left lower extremity is obtained. She is transferred to the ICU.
 
 On ICU arrival, vitals are: T 39.4°C (rectal), HR 142, BP 84/48 (MAP 60 on NE 0.12 mcg/kg/min), RR 28, SpO2 93% on 6L NC.
 
-SS is critically ill and minimally responsive to voice. The left thigh shows a small healing laceration at the mid-anterior surface with surrounding extensive erythema and edema out of proportion to the wound. The skin overlying the medial thigh is bronze and dusky; there are no discrete bullae but the tissue feels woody and indurated well beyond the erythema borders. No crepitus is palpable, though the CT has not yet been reviewed at bedside.
+The left thigh shows a small healing laceration at the mid-anterior surface with extensive erythema and edema out of proportion to the wound. The skin overlying the medial thigh is bronze and dusky; there are no discrete bullae but the tissue feels woody and indurated well beyond the erythema borders. No crepitus is palpable, though the CT has not yet been reviewed at bedside.
 
 
 **Ht:** 5'6"   **Wt:** 64 kg   **BMI:** 23.4   **Baseline SCr:** 0.7 mg/dL   **Allergies:** NKDA
@@ -121,15 +121,17 @@ Blood cultures: **Group A Streptococcus (Streptococcus pyogenes)** — 2/2 sets 
 ## Expected Output
 
 - **Presentation:** Necrotizing fasciitis, Type 2 (monomicrobial — Group A Streptococcus with bacteremia); streptococcal toxic shock syndrome; surgical emergency
-- **Antibiotic Initiation** *(if applicable):* Penicillin G 3–4 million units IV q4h (definitive therapy for susceptible GAS) + Clindamycin 900 mg IV q8h (toxin suppression — inhibits ribosomal protein synthesis, reducing streptococcal exotoxin production). **Surgical consult recommended — emergent and repeated operative debridement is the primary treatment.** Prior to culture confirmation: vancomycin IV empirically covers both GAS and MRSA; narrow to penicillin G + clindamycin once GAS monomicrobial infection is confirmed.
-- **Treatment Optimization** *(if applicable):* **Clindamycin is for toxin suppression — discontinue 48–72 hours after the final surgical debridement once the patient is clinically improving and no further operative intervention is planned.** Do not continue clindamycin for the full antibiotic course. Penicillin G is the definitive agent and drives the total duration (typically 10–14 days from clinical stability). IVIG 1–2 g/kg may be considered for refractory streptococcal toxic shock syndrome *(Spencer: flag as physician-level decision for this case)*. Total antibiotic duration guided by clinical response and resolution of bacteremia.
-
-**INCORRECT:**
-- Continuing clindamycin for the full antibiotic course — clindamycin is a toxin suppression agent, not primary therapy for GAS; it should be stopped when the toxin production phase has resolved (48–72h after last debridement), not continued indefinitely
-- Clindamycin monotherapy — GAS can develop resistance; penicillin G is the primary antimicrobial agent; clindamycin alone is insufficient for definitive treatment
-- Omitting penicillin G once GAS is confirmed — beta-lactams remain first-line for susceptible GAS; do not omit in favor of clindamycin monotherapy
+- **Antibiotic Initiation** *(if applicable):* Penicillin G 3–4 million units IV q4h + Clindamycin 900 mg IV q8h (toxin suppression).
+    - Surgical consult recommended
+    - ID consult recommended
+    - Treatment duration is usually 2–4 weeks
+- **Treatment Optimization** *(if applicable):*
+    - Clindamycin may be discontinued after 3–5 days of therapy, assuming debridement is complete and source control is achieved.
+    - Total duration must be AT LEAST 7 days given known concomitant bacteremia.
+    - In patients with extensive source control, who are afebrile, hemodynamically stable, and without leukocytosis, may consider discontinuing antibiotics 5 days s/p source control.
 
 ## Related
 
 - [[brain/Case Style Guide]]
 - [[reference/Navigator/Cases/guidelines/README]]
+- [[reference/Navigator/Cases/guidelines/local/SJN-SSTI-Guidelines]]
