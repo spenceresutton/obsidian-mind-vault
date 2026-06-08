@@ -22,6 +22,7 @@ Incident docs live in `work/incidents/`. See `Incidents.base` for overview.
 
 - [[Navigator Hospital Pipeline]] — design partner pipeline, Aug 1 deadline; 2–3 closures needed
 - [[Apollo Studio]] — go-to-market, MUE demos, EDA integration POC (Bryan Kleinberg + Paulo)
+- [[Apollo MUE Data Engine]] — synthetic-data engine for MUE demos; config-driven, evidence-grounded; anticoagulation first build
 - [[Navigator Product]] — tiger team, speed optimization, LLM-as-judge testing framework
 - [[Q2 2026 OKRs]] — $175K expansion, 3 Navigator partnerships, 7 Apollo opportunities
 - [[Nova Pipeline]] — MIPD prospect demos; Emerson Hospital (Eleanor Duquette)
