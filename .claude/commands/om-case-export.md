@@ -4,7 +4,7 @@ description: "Export approved Navigator sanity test cases to a new Google Doc, m
 
 Export approved Navigator sanity test cases to a new Google Doc matching the St. Joseph Sanity Test document format.
 
-**Arguments (optional):** disease state(s) or case numbers to export (e.g., `HAP`, `CAP`, `UTI`, `HAP-14 HAP-15`). If none, export all approved cases.
+**Arguments (optional):** disease state(s) or case numbers to export (e.g., `HAP`, `CAP`, `UTI`, `HAP-14 HAP-15`). If none, export all approved cases. Add `pending` to export from the review queue instead of the approved set (e.g., `pending SSTI`, `pending DFI`) — useful for sharing cases out for review before they're approved.
 
 $ARGUMENTS
 
@@ -12,7 +12,9 @@ $ARGUMENTS
 
 ## Step 1 — Load Cases
 
-Read all `.md` files from `reference/Navigator/Cases/approved/`. Filter by `disease_state` or `case_number` frontmatter if arguments are provided. Sort by `case_number` ascending.
+Read all `.md` files from `reference/Navigator/Cases/approved/` (or `reference/Navigator/Cases/pending/` if `pending` is passed). Filter by `disease_state` or `case_number` frontmatter if arguments are provided. Sort by `case_number` ascending.
+
+**Distinguishing SSTI vs DFI:** diabetic-foot-infection cases share `disease_state: "SSTI"` and the SSTI case-number sequence, but carry a `dfi` tag and a `dfi-` filename prefix. To split them, filter on the filename prefix (`ssti-` vs `dfi-`), not `disease_state`.
 
 ---
 
@@ -147,6 +149,8 @@ Sub-group labels (Electrolytes, Liver function, Minerals/Calcium) are plain-text
 </table>
 ```
 
+**Trailing single-row lab tables:** some cases append a lone value (e.g. `| HbA1c | 8.6% | < 5.7% |`) as its own one-row markdown table after the Sepsis Markers table, with no `Test`/`Result` header. Render its cells as a **plain data row, not a bold header** — only bold a table's first row when it actually reads like a header (contains `Test`, `Antibiotic`, `Organism`, or `Result`). Likewise, a one-row 2-column culture table (e.g. `| Organism | Staph aureus (MSSA) |`) should render as a plain `label: value` paragraph, not a bold-header table.
+
 ### 2k. Sepsis Markers Table
 
 ```html
@@ -231,7 +235,9 @@ textContent:     [the assembled HTML string]
 contentMimeType: "text/html"
 ```
 
-`text/html` content is automatically converted to a Google Doc with rich formatting preserved — headings, bold, tables, and lists all carry over.
+**Conversion caveat (verified 2026-06-03):** this Drive tool does **not** auto-convert `text/html` to a native Google Doc — it only auto-converts `text/plain` → Doc and `text/csv` → Sheet. The file uploads as a raw `.html` file (the response and `get_file_metadata` show `mimeType: text/html` and a `/file/d/.../view` URL). Setting the deprecated `mimeType: application/vnd.google-apps.document` target does **not** force conversion either. The `.html` file is still fully usable: opening it in Drive and choosing **File → Open with → Google Docs** renders all formatting (tables, bold, headings) into an editable Doc. Don't claim the link is a Google Doc — it's an HTML file that converts on open.
+
+A `.docx` (built via python-docx from the same parsed model) opens directly in Google Docs with formatting intact and avoids the open-with step, but base64-encoding a multi-case `.docx` is too large to round-trip through the tool call. Prefer the HTML path.
 
 ---
 
@@ -239,9 +245,10 @@ contentMimeType: "text/html"
 
 Output:
 - Number of cases exported by disease state
-- Title of the created Google Doc
-- Google Doc link (from the `webViewLink` in the tool response)
-- Note: open the new doc, verify formatting, then copy the case blocks into the target St. Joseph doc (`1x0S5mV4_IvrhFONpMJVz5UJahj6darYBLfLHUEIH2C4`) at the appropriate position
+- Title of the created file and its link (from `viewUrl`/`webViewLink` in the tool response)
+- **Tell the user it's an HTML file, not a Doc**: to read/copy with formatting, open the link → **File → Open with → Google Docs**
+- Then copy the case blocks into the target St. Joseph doc (`1x0S5mV4_IvrhFONpMJVz5UJahj6darYBLfLHUEIH2C4`) at the appropriate position
+- Flag any junk/test files created during the run for manual deletion (no Drive delete tool is exposed)
 
 ---
 
