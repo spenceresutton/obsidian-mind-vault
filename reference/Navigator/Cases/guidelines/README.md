@@ -47,6 +47,7 @@ tags: [guideline]
 |------|---------|--------|
 | [[reference/Navigator/Cases/guidelines/local/SJN-Inpatient-UTI-Guidelines]] | UTI | Complete |
 | [[reference/Navigator/Cases/guidelines/local/SJN-Inpatient-Pneumonia-Guidelines]] | CAP/HAP | Complete |
+| [[reference/Navigator/Cases/guidelines/local/SJN-SSTI-Guidelines]] | SSTI/DFI | Complete |
 
 ### National
 
@@ -60,6 +61,8 @@ tags: [guideline]
 | [[reference/Navigator/Cases/guidelines/national/2019-IDSA-ATS-CAP-Guidelines]] | CAP | Complete |
 | [[reference/Navigator/Cases/guidelines/national/2016-IDSA-ATS-HAP-VAP-Guidelines]] | HAP/VAP | Complete |
 | [[reference/Navigator/Cases/guidelines/national/2019-NEJM-Aspiration-Pneumonia]] | Aspiration | Complete |
+| [[reference/Navigator/Cases/guidelines/national/2014-IDSA-SSTI-Guidelines]] | SSTI | Complete |
+| [[reference/Navigator/Cases/guidelines/national/2023-IWGDF-IDSA-DFI-Guidelines]] | DFI | Complete |
 
 ## Related
 
